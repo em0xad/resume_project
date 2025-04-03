@@ -20,6 +20,11 @@
 .text-secondary { color: var(--secondary-color); }
 .text-tertiary { color: var(--tertiary-color); }
 .font-rubik { font-family: var(--font-family); }
+
+/* Hover Effect for Cards */
+.card:hover {
+    background-color:#12c2e9;
+}
 /* تعريف hover بشكل مخصص */
 a:hover {
     color: var(--secondary-color) !important;
