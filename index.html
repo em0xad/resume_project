@@ -7,8 +7,7 @@
     <title>Personal Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-rubik bg-gray-100 text-gray-800">
 
@@ -16,14 +15,25 @@
     <nav class="bg-primary p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-2xl font-bold">My Portfolio</a>
-            <ul class="flex space-x-6">
-                <li><a href="index.html" class="text-white transition duration-300">Home</a></li>
-                <li><a href="resume.html" class="text-white transition duration-300">Resume</a></li>
-                <li><a href="projects.html" class="text-white transition duration-300">Projects</a></li>
-                <li><a href="contact.html" class="text-white transition duration-300">Contact</a></li>
+            
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Items -->
+            <ul id="menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-primary md:bg-transparent top-16 left-0 w-full md:w-auto text-center md:text-left z-50">
+                <li><a href="index.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Home</a></li>
+                <li><a href="resume.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Resume</a></li>
+                <li><a href="projects.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Projects</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Contact</a></li>
             </ul>
-            
-            
         </div>
     </nav>
 
@@ -54,6 +64,15 @@
             <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Script to Toggle Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
