@@ -1,31 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Website</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Customize Tailwind colors -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            rubik: ["Rubik", "sans-serif"],
-          },
-          colors: {
-            primary: "#1D4ED8",     // Blue-700
-            "primary-dark": "#1E40AF",
-            secondary: "#DC2626",   // Red-600
-            tertiary: "#991B1B",    // Red-800
-          },
-        },
-      },
-    };
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-rubik bg-gray-100 text-gray-800">
 
@@ -33,55 +13,86 @@
   <nav class="bg-primary p-4">
     <div class="container mx-auto flex justify-between items-center">
       <a href="index.html" class="text-white text-2xl font-bold">My Portfolio</a>
-
-      <!-- Hamburger Icon for Mobile -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-white focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-               xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Menu Items -->
-      <ul id="menu"
-          class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-primary md:bg-transparent top-16 left-0 w-full md:w-auto text-center md:text-left z-50">
-        <li><a href="index.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Home</a></li>
-        <li><a href="resume.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Resume</a></li>
-        <li><a href="projects.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Projects</a></li>
-        <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Contact</a></li>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-white hover:text-secondary transition duration-300">Home</a></li>
+        <li><a href="resume.html" class="text-white hover:text-secondary transition duration-300">Resume</a></li>
+        <li><a href="projects.html" class="text-white hover:text-secondary transition duration-300">Projects</a></li>
+        <li><a href="contact.html" class="text-white hover:text-secondary transition duration-300">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <div class="container mx-auto text-center p-8">
-    <img src="images/e.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 mx-auto mb-4" loading="lazy" />
-    <h1 class="text-3xl text-primary font-bold">Emad Aladl</h1>
-    <p class="text-lg text-secondary">Web Developer specializing in HTML, CSS, JavaScript</p>
+  <!-- Cards Container -->
+  <div class="container mx-auto py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-4">
+
+    <!-- Card Template -->
+    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
+      <div 
+        class="bg-white transition-colors duration-300 p-6 h-full"
+        style="transition: background 0.5s ease;"
+        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
+        onmouseout="this.style.background='white'; this.style.color='black';"
+      >
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <p class="text-lg"><strong>Bachelor’s Degree in Computer Science</strong></p>
+        <p>University of XYZ, 2021</p>
+      </div>
+    </div>
+
+    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
+      <div 
+        class="bg-white transition-colors duration-300 p-6 h-full"
+        style="transition: background 0.5s ease;"
+        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
+        onmouseout="this.style.background='white'; this.style.color='black';"
+      >
+        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+        <ul class="list-disc pl-5">
+          <li>HTML, CSS, JavaScript</li>
+          <li>React, Angular, Vue.js</li>
+          <li>Node.js, Express</li>
+          <li>Version Control (Git, GitHub)</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
+      <div 
+        class="bg-white transition-colors duration-300 p-6 h-full"
+        style="transition: background 0.5s ease;"
+        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
+        onmouseout="this.style.background='white'; this.style.color='black';"
+      >
+        <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
+        <p class="text-lg"><strong>Front-End Developer</strong></p>
+        <p>XYZ Company, 2022 - Present</p>
+        <ul class="list-disc pl-5">
+          <li>Developed and maintained web applications using React and Tailwind CSS.</li>
+          <li>Collaborated with back-end developers to integrate APIs.</li>
+          <li>Optimized applications for maximum speed and scalability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
+      <div 
+        class="bg-white transition-colors duration-300 p-6 h-full"
+        style="transition: background 0.5s ease;"
+        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
+        onmouseout="this.style.background='white'; this.style.color='black';"
+      >
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <p class="text-lg">You can reach me at:</p>
+        <ul class="list-disc pl-5">
+          <li>Email: <a href="mailto:emad@example.com" class="underline">emad@example.com</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/emad" class="underline">linkedin.com/in/emad</a></li>
+          <li>GitHub: <a href="https://github.com/emad" class="underline">github.com/emad</a></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
-
-  <!-- About Section -->
-  <section class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white py-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-extrabold mb-4">About Me</h2>
-      <p class="text-xl px-4">
-        Hello! I’m Emad Aladl, a web developer with a passion for creating websites and web applications using modern technologies. 
-        I have extensive experience in front-end development with HTML, CSS, and JavaScript, and I am constantly striving to improve my skills in coding.
-      </p>
-    </div>
-  </section>
-
-  <!-- Resume Download -->
-  <section class="text-center py-8">
-    <div class="container mx-auto">
-      <a href="resume/emad_aladl.pdf" class="bg-secondary text-white px-6 py-3 rounded-lg text-xl hover:bg-tertiary transition duration-300">
-        Download Resume
-      </a>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-4">
@@ -89,19 +100,6 @@
       <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Fix: Safe script for menu toggle -->
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('menu');
-      if (menuToggle && menu) {
-        menuToggle.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-      }
-    });
-  </script>
 
 </body>
 </html>
