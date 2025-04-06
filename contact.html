@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Contact - Emad Aladl</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-rubik text-gray-800">
+
+    <!-- Navigation Menu -->
+    <nav class="bg-primary p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">My Portfolio</a>
+            
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+           
+            <ul id="menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-primary md:bg-transparent top-16 left-0 w-full md:w-auto text-center md:text-left z-50">
+                <li><a href="index.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Home</a></li>
+                <li><a href="resume.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Resume</a></li>
+                <li><a href="projects.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Projects</a></li>
+                <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="container mx-auto p-8 bg-white rounded-lg shadow-lg mt-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl text-primary font-bold mb-4">Contact Me</h1>
+            <p class="text-lg text-secondary">I would love to hear from you. Please feel free to get in touch!</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Form -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl text-primary font-semibold mb-4">Get in Touch</h2>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" name="message" class="w-full p-3 border border-gray-300 rounded-lg" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white p-3 rounded-lg hover:bg-secondary transition duration-300" >Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl text-primary font-semibold mb-4">Contact Information</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center">
+                        <span class="text-gray-700">📧</span>
+                        <a href="mailto:emad@example.com" class="text-primary hover:text-secondary ml-2">emad@example.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-700">🔗</span>
+                        <a href="https://linkedin.com/in/emad" class="text-primary hover:text-secondary ml-2">LinkedIn: linkedin.com/in/emad</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-700">💻</span>
+                        <a href="https://github.com/emad" class="text-primary hover:text-secondary ml-2">GitHub: github.com/emad</a>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-gray-700">📍</span>
+                        <span class="ml-2 text-gray-700">Location: Idlib City</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script to Toggle Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
