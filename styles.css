@@ -47,8 +47,7 @@ body {
   .bg-secondary { background-color: #10b981; }
   .bg-tertiary { background-color: #059669; }
   .bg-primary-gradient {
-    background: linear-gradient(to right, #000000, #9edeb3);
-  }
+    background: linear-gradient(to left, #000000, #d0c200);  }
   .bg-gray-800 { background-color: #0f172a; }
   
   .text-white { color: white; }
