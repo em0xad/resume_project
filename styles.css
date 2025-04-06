@@ -260,9 +260,11 @@ a {
     .nav-links {
         display: flex !important;
         position: static;
+        justify-content: end;
         flex-direction: row;
         background: transparent;
     }
+}
 
     .hamburger {
         display: none;
