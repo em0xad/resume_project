@@ -6,26 +6,18 @@
   <title>Resume</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* إظهار القائمة عند تفعيل checkbox */
-    #menu-toggle:checked ~ #menu {
-      display: block;
-    }
-  </style>
 </head>
-<body class="font-rubik bg-gray-100 text-gray-800">
+<body class="body">
 
   <!-- Navigation Menu -->
-  <nav class="bg-primary p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-white text-2xl font-bold">My Portfolio</a>
+  <nav class="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">My Portfolio</a>
         
         <!-- Hamburger Icon for Mobile -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        <div class="hamburger">
+            <button id="menu-toggle" class="menu-button">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M4 6h16M4 12h16M4 18h16"></path>
@@ -34,42 +26,32 @@
         </div>
 
         <!-- Menu Items -->
-        <ul id="menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-primary md:bg-transparent top-16 left-0 w-full  md:w-auto text-center md:text-left z-50">
-            <li><a href="index.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Home</a></li>
-            <li><a href="resume.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Resume</a></li>
-            <li><a href="projects.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Projects</a></li>
-            <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Contact</a></li>
+        <ul id="menu" class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-</nav>
+  </nav>
 
   <!-- Cards Container -->
-  <div class="container mx-auto py-10 grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+  <div class="container cards-grid">
 
     <!-- Card 1 -->
-    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
-      <div 
-        class="bg-white transition-colors duration-300 p-6 h-full"
-        style="transition: background 0.5s ease;"
-        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
-        onmouseout="this.style.background='white'; this.style.color='black';"
-      >
-        <h2 class="text-2xl font-semibold mb-4">Education</h2>
-        <p class="text-lg"><strong>Bachelor’s Degree in Computer Science</strong></p>
+    <div class="card">
+      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+        <h2>Education</h2>
+        <p><strong>Bachelor’s Degree in Computer Science</strong></p>
         <p>University of XYZ, 2021</p>
       </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
-      <div 
-        class="bg-white transition-colors duration-300 p-6 h-full"
-        style="transition: background 0.5s ease;"
-        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
-        onmouseout="this.style.background='white'; this.style.color='black';"
-      >
-        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-        <ul class="list-disc pl-5">
+    <div class="card">
+      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+        <h2>Skills</h2>
+        <ul>
           <li>HTML, CSS, JavaScript</li>
           <li>React, Angular, Vue.js</li>
           <li>Node.js, Express</li>
@@ -80,17 +62,12 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
-      <div 
-        class="bg-white transition-colors duration-300 p-6 h-full"
-        style="transition: background 0.5s ease;"
-        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
-        onmouseout="this.style.background='white'; this.style.color='black';"
-      >
-        <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
-        <p class="text-lg"><strong>Front-End Developer</strong></p>
+    <div class="card">
+      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+        <h2>Work Experience</h2>
+        <p><strong>Front-End Developer</strong></p>
         <p>XYZ Company, 2022 - Present</p>
-        <ul class="list-disc pl-5">
+        <ul>
           <li>Built and maintained responsive UI using React.</li>
           <li>Collaborated with back-end teams for API integration.</li>
           <li>Improved performance and accessibility.</li>
@@ -99,19 +76,14 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="rounded-lg shadow transition-transform transform hover:scale-105 overflow-hidden">
-      <div 
-        class="bg-white transition-colors duration-300 p-6 h-full"
-        style="transition: background 0.5s ease;"
-        onmouseover="this.style.background='linear-gradient(to right, #12c2e9, #e64157)'; this.style.color='white';"
-        onmouseout="this.style.background='white'; this.style.color='black';"
-      >
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p class="text-lg">You can reach me at:</p>
-        <ul class="list-disc pl-5">
-          <li>Email: <a href="mailto:emad@example.com" class="underline">emad@example.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/emad" class="underline">linkedin.com/in/emad</a></li>
-          <li>GitHub: <a href="https://github.com/emad" class="underline">github.com/emad</a></li>
+    <div class="card">
+      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
+        <h2>Contact</h2>
+        <p>You can reach me at:</p>
+        <ul>
+          <li>Email: <a href="mailto:emad@example.com">emad@example.com</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/emad">linkedin.com/in/emad</a></li>
+          <li>GitHub: <a href="https://github.com/emad">github.com/emad</a></li>
         </ul>
       </div>
     </div>
@@ -119,19 +91,29 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto text-center">
+  <footer class="footer">
+    <div class="container text-center">
       <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
     </div>
   </footer>
+
   <!-- Script to Toggle Mobile Menu -->
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
-
     menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+      menu.classList.toggle('show');
     });
-</script>
+
+    function highlightCard(el) {
+      el.style.background = 'linear-gradient(to right, #12c2e9, #e64157)';
+      el.style.color = 'white';
+    }
+
+    function resetCard(el) {
+      el.style.background = 'white';
+      el.style.color = 'black';
+    }
+  </script>
 </body>
 </html>

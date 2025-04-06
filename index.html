@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-rubik bg-gray-100 text-gray-800">
+<body>
 
-    <!-- Navigation Menu -->
-    <nav class="bg-primary p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-white text-2xl font-bold">My Portfolio</a>
-            
-            <!-- Hamburger Icon for Mobile -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+  <!-- Navigation Menu -->
+  <nav class="bg-primary p-4">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">My Portfolio</a>
 
-            <!-- Menu Items -->
-            <ul id="menu" class="hidden md:flex md:space-x-6 flex-col md:flex-row absolute md:static bg-primary md:bg-transparent top-16 left-0 w-full md:w-auto text-center md:text-left z-50">
-                <li><a href="index.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Home</a></li>
-                <li><a href="resume.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Resume</a></li>
-                <li><a href="projects.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Projects</a></li>
-                <li><a href="contact.html" class="block px-4 py-2 text-white hover:bg-primary-dark">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger md-hidden">
+        <button id="menu-toggle" class="text-white">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
 
-    <div class="container mx-auto text-center p-8">
-        <img src="images/e.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 mx-auto mb-4" loading="lazy">
-        <h1 class="text-3xl text-primary">Emad Aladl</h1>
-        <p class="text-lg text-secondary">Web Developer specializing in HTML, CSS, JavaScript</p>
+      <!-- Menu Items -->
+      <ul id="menu" class="hidden menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- About Section -->
-    <section class="bg-primary-gradient text-white py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-extrabold mb-4">About Me</h2>
-            <p class="text-xl px-4">Hello! I’m Emad Aladl, a web developer with a passion for creating websites and web applications using modern technologies. I have extensive experience in front-end development with HTML, CSS, and JavaScript, and I am constantly striving to improve my skills in coding.</p>
-        </div>
-    </section>
+  <div class="container text-center p-8">
+    <img src="images/e.jpg" alt="Profile Picture" class="profile-img" loading="lazy">
+    <h1 class="text-3xl text-primary">Emad Aladl</h1>
+    <p class="text-lg text-secondary">Web Developer specializing in HTML, CSS, JavaScript</p>
+  </div>
 
-    <!-- Resume Download Section -->
-    <section class="text-center py-8">
-        <div class="container mx-auto">
-            <a href="resume/emad_aladl.pdf" class="bg-secondary text-white px-6 py-3 rounded-lg text-xl hover:bg-tertiary transition duration-300">Download Resume</a>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section class="bg-primary-gradient text-white py-16">
+    <div class="container text-center">
+      <h2 class="text-4xl font-extrabold mb-4">About Me</h2>
+      <p class="text-xl px-4">
+        Hello! I’m Emad Aladl, a web developer with a passion for creating websites and web applications using modern technologies. I have extensive experience in front-end development with HTML, CSS, and JavaScript, and I am constantly striving to improve my skills in coding.
+      </p>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Resume Download Section -->
+  <section class="text-center py-8">
+    <div class="container">
+      <a href="resume/emad_aladl.pdf" class="download-btn">Download Resume</a>
+    </div>
+  </section>
 
-    <!-- Script to Toggle Mobile Menu -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Emad Aladl. All rights reserved.</p>
+    </div>
+  </footer>
 
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
