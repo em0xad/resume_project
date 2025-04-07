@@ -1,3 +1,14 @@
+/*visual colors*/
+:root {
+  --primary-color: #000000;
+  --secondary-color: #d4af37;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #222222;
+  --border-color: #cccccc;
+  --link-color: #d4af37;
+}
+
 
 /* Hover Effect for Cards */
 .card:hover {
