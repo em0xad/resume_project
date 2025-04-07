@@ -667,9 +667,9 @@ body {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 64px;
-      left: 0;
-      width: 100%;
+      top: 27px;
+      left: -16px;
+      width: 100vw;
       background-color: #0f172a;
       z-index: 50;
       padding: 1rem 0;
