@@ -35,60 +35,54 @@
   </div>
 </nav>
 
-  <!-- Cards Container -->
-  <div class="container cards-grid">
-
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
-        <h2>Education</h2>
-        <p><strong>Bachelor’s Degree in Computer Science</strong></p>
-        <p>University of XYZ, 2021</p>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Angular, Vue.js</li>
-          <li>Node.js, Express</li>
-          <li>Git, GitHub</li>
-          <li>Responsive Web Design</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
-        <h2>Work Experience</h2>
-        <p><strong>Front-End Developer</strong></p>
-        <p>XYZ Company, 2022 - Present</p>
-        <ul>
-          <li>Built and maintained responsive UI using React.</li>
-          <li>Collaborated with back-end teams for API integration.</li>
-          <li>Improved performance and accessibility.</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <div class="card-content" onmouseover="highlightCard(this)" onmouseout="resetCard(this)">
-        <h2>Contact</h2>
-        <p>You can reach me at:</p>
-        <ul>
-          <li>Email: <a href="mailto:emad@example.com">emad@example.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/emad">linkedin.com/in/emad</a></li>
-          <li>GitHub: <a href="https://github.com/emad">github.com/emad</a></li>
-        </ul>
-      </div>
-    </div>
+<section class="projects-section">
+  <div class="projects-header">
+    <h1>My Resume</h1>
+    <p>Here are some Information about me and my Experience  </p>
   </div>
 
+  <div class="projects-grid">
+    <!-- Cards -->
+    <div class="project-card">
+      <h2>Education</h2>
+      <p><strong>Bachelor’s Degree in Computer Science</strong></p>
+      <p>University of Idlib, 2022</p>
+    </div>
+
+    <div class="project-card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Angular, Vue.js</li>
+        <li>Node.js, Express</li>
+        <li>Git, GitHub</li>
+        <li>Responsive Web Design</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Work Experience</h2>
+      <p><strong>Front-End Developer</strong></p>
+      <p>Google Company, 2024 - Present</p>
+      <ul>
+        <li>Built and maintained responsive UI using React.</li>
+        <li>Collaborated with back-end teams for API integration.</li>
+        <li>Improved performance and accessibility.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Contact</h2>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: <a href="mailto:emad@example.com">emad@example.com</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/emad">linkedin.com/in/emad</a></li>
+        <li>GitHub: <a href="https://github.com/emad">github.com/emad</a></li>
+      </ul>
+    </div>
+
+    
+</section>
   <!-- Footer -->
   <footer class="footer">
     <div class="container text-center">
@@ -104,15 +98,8 @@
       menu.classList.toggle('show');
     });
 
-    function highlightCard(el) {
-      el.style.background = 'linear-gradient(to right, #12c2e9, #e64157)';
-      el.style.color = 'white';
-    }
-
-    function resetCard(el) {
-      el.style.background = 'white';
-      el.style.color = 'black';
-    }
+    
+    
   </script>
 </body>
 </html>

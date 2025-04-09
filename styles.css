@@ -1,49 +1,48 @@
 /* تعريف المتغيرات في :root لتسهيل التعديل من مكان واحد */
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #c63bfa;
-  --background-color: #ffffff;
-  --text-color: #b9b9b9;
-  --body-text-color: #1f2937;
-  --heading-color: #ffffff;
-  --border-color: #cccccc;
-  --link-color: #c63bfa;
-  --hover-color: #ba1e33;
-
-  --card-hover-color: #12c2e9;
-  --download-btn-hover: #81ffd7;
-  --nav-links-hover-bg: #1c2f6c;
-
-  --gradient-start: #df78ff;
-  --gradient-end: #5edcff;
-
-  --menu-bg: #0f172a;
-/* 
-  --contact-section-bg: #ffffff; 
-  --contact-heading-color: #1e3a8a;
-  --contact-text-color: #6b7280;
-  --contact-card-bg: #f9fafb;
-  --form-label-color: #374151;
-  --form-border-color: #d1d5db;
-  --submit-btn-bg: var(--menu-bg);
-
-  --project-heading-color: #0f172a;
-  --project-text-color: #718096;
-  --project-card-bg: #f9fafb;
-  --project-card-text-color: #4a5568;
-
-  --footer-bg-project: #2d3748;
-  --footer-bg-resume: #0f172a; */
+    --secondary-color: #c63bfa;
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    --body-text-color: #1e3a8a;
+    --heading-color: #1e3a8a;
+    --border-color: #cccccc;
+    --link-color: #13cfe8;
+    --hover-color: #13cfe8;
+    --card-hover-color: #12c2e9;
+    --download-btn-hover: #12c2e9;
+    --nav-links-hover-bg: #1c2f6c;
+    --gradient-start: #13cfe8;
+    --gradient-end: #1c2f6c;
+    --menu-bg: #ffffff;
+    --contact-section-bg: #ffffff;
+    --contact-heading-color: #1e3a8a;
+    --contact-text-color: #6b7280;
+    --contact-card-bg: #f9fafb;
+    --form-label-color: #374151;
+    --form-border-color: #d1d5db;
+    --submit-btn-bg: var(--menu-bg);
+    --project-heading-color: #1e3a8a;
+    --project-text-color: ##ffffff;
+    --project-card-bg: #f9fafb;
+    --project-card-text-color: #4a5568;
+    --card-hover-text-color:#ffffff;
+    --footer-bg-project: #2d3748;
+    --footer-bg-resume: #1e3a8a;
+    --text-color-footer:#ffffff;
 }
-
 /*--------- الأساليب المشتركة ---------*/
+
 
 /* تأثير hover للروابط */
 a:hover {
+  color: #c63bfa !important;
+}
+/*hover for link navbar*/
+.nav a:hover{
   color: var(--hover-color) !important;
 }
 
-/* إعداد الخط وخلفية الجسم */
 body {
   font-family: 'Rubik', sans-serif;
   background-color: var(--primary-color);
@@ -52,12 +51,13 @@ body {
   padding: 0;
 }
 
+
 /* تدرج الخلفية */
 .bg-primary-gradient {
   background: linear-gradient(to left, var(--gradient-start), var(--gradient-end));
 }
 
-/* الحاوية العامة */
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -70,7 +70,7 @@ body {
 .text-3xl { font-size: 1.875rem; font-weight: bold; }
 .text-4xl { font-size: 2.25rem; font-weight: 800; }
 .text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
+.text-xl { font-size: 1.25rem; color:var(--text-color);}
 .font-extrabold { font-weight: 800; }
 
 /* الحواف والتباعد */
@@ -100,8 +100,8 @@ body {
 /* صورة البروفايل */
 .profile-img {
   border-radius: 9999px;
-  width: 8rem;
-  height: 8rem;
+  width: 10rem;
+  height: 11rem;
   display: block;
   margin: 11px auto 1rem auto;
 }
@@ -131,30 +131,50 @@ body {
 }
 
 .menu li a {
-  display: block;
+  
   padding: 0.5rem 1rem;
   color: var(--text-color);
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
 }
 
 .menu li a:hover {
   background-color: var(--menu-bg);
 }
+.menu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--hover-color);
+  transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
 
 /* زر التنزيل */
 .download-btn {
-  background-color: var(--link-color);
-  color: var(--heading-color);
+  background-color: var(--body-text-color);
+  color: var(--background-color);
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1.25rem;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .download-btn:hover {
-  background-color: var(--download-btn-hover);
-  scale: 10px;
+  background-color: #4e4cff; /* تغيير اللون الخلفي إلى الأزرق */
+  transform: scale(1.05); /* تكبير الزر */
+  color: #ffffff !important; /* تغيير اللون النصي إلى الأبيض */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل */
 }
 
 /* أيقونة الهمبرغر */
@@ -309,6 +329,15 @@ a {
   display: grid;
   gap: 2rem;
 }
+/*hover card */
+.card-content:hover {
+  background: linear-gradient(to right, #000000, #1c2f6c);
+  color: white;
+}
+
+.card-content:hover a {
+  color: #ffe066; 
+}
 
 @media (min-width: 768px) {
   .contact-grid {
@@ -350,18 +379,20 @@ a {
 
 .submit-btn {
   width: 100%;
-  background-color: var(--submit-btn-bg);
-  color: var(--heading-color);
+  background-color: var(--body-text-color);
+  color: var(--primary-color);
   padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* إضافة تأثير التحويل */
 }
 
 .submit-btn:hover {
-  background-color: var(--submit-btn-bg);
+  background-color: #4e4cff;
+  transform: scale(1.05); /* تكبير الزر بنسبة 5% */
 }
+
 
 .contact-info {
   list-style: none;
@@ -375,7 +406,7 @@ a {
 }
 
 .contact-info a {
-  color: var(--menu-bg);
+  color: var(--body-text-color);
   margin-left: 0.5rem;
 }
 
@@ -495,10 +526,11 @@ a {
 }
 
 .project-card:hover {
-  background-color: var(--card-hover-color);
+  background: linear-gradient(to right,var(--gradient-start), var(--gradient-end));
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
+
 
 .project-card h2 {
   font-size: 1.5rem;
@@ -510,7 +542,11 @@ a {
   color: var(--project-card-text-color);
   margin-bottom: 1rem;
 }
-
+.project-card:hover p,
+.project-card:hover ul {
+  color: var(--card-hover-text-color);
+  margin-bottom: 1rem;
+}
 .project-card a {
   color: var(--project-heading-color);
   font-weight: 500;
@@ -529,7 +565,7 @@ a {
   margin-top: 2rem;
 }
 
-/*--------- صفحة الرزومه ---------*/
+/*--------- resume---------*/
 
 body.resume {
   font-family: 'Rubik', sans-serif;
@@ -596,12 +632,14 @@ body.resume {
   border-radius: 5px;
 }
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
+/*cards*/
+/* .card-resume {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+} */
+
 
 @media (min-width: 768px) {
   .hamburger {
@@ -617,41 +655,11 @@ body.resume {
   }
 }
 
-.card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-}
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card-content {
-  background: var(--contact-section-bg);
-  padding: 1.5rem;
-  transition: background 0.5s ease, color 0.5s ease;
-}
-
-.card-content h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.card-content ul {
-  padding-left: 1.25rem;
-  list-style-type: disc;
-}
-
-.card-content a {
-  text-decoration: underline;
-}
 
 .footer {
   background-color: var(--footer-bg-resume);
-  color: var(--heading-color);
+  color: var(--text-color-footer);
   padding: 1rem 0;
   text-align: center;
 }
