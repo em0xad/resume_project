@@ -1,4 +1,3 @@
-/* تعريف المتغيرات في :root لتسهيل التعديل من مكان واحد */
 :root {
   --primary-color: #ffffff;
     --secondary-color: #c63bfa;
@@ -86,7 +85,6 @@ body {
 .px-4 { padding-left: 1rem; padding-right: 1rem; }
 .mb-4 { margin-bottom: 1rem; }
 
-/*--------- رأس وترويسة الصفحة ---------*/
 
 /* الشعار */
 .logo {
@@ -99,8 +97,8 @@ body {
 /* صورة البروفايل */
 .profile-img {
   border-radius: 9999px;
-  width: 12rem;
-  height: 13rem;
+     width: 12rem;
+    height: 13rem;
   display: block;
   margin: 11px auto 1rem auto;
 }
@@ -157,7 +155,7 @@ body {
   width: 100%;
 }
 
-/* زر التنزيل */
+/* download btn*/
 .download-btn {
   background-color: var(--body-text-color);
   color: var(--background-color);
@@ -176,18 +174,17 @@ body {
   color: #ffffff !important; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
-/* أيقونة الهمبرغر */
+/*icon */
 .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-/*--------- استجابة القائمة ---------*/
 
 .hidden {
   display: none;
 }
-
+/*responsive menu*/
 @media (min-width: 768px) {
   .md-hidden {
     display: none !important;
@@ -296,7 +293,7 @@ a {
   display: none;
 }
 
-/* قسم الاتصال */
+/*  contact page */
 .contact-section {
   max-width: 1200px;
   margin: 2rem auto;
