@@ -31,14 +31,13 @@
     --footer-bg-resume: #1e3a8a;
     --text-color-footer:#ffffff;
 }
-/*--------- الأساليب المشتركة ---------*/
+
 
 
 /* تأثير hover للروابط */
 a:hover {
   color: #c63bfa !important;
 }
-/*hover for link navbar*/
 .nav a:hover{
   color: var(--hover-color) !important;
 }
@@ -100,8 +99,8 @@ body {
 /* صورة البروفايل */
 .profile-img {
   border-radius: 9999px;
-  width: 10rem;
-  height: 11rem;
+  width: 12rem;
+  height: 13rem;
   display: block;
   margin: 11px auto 1rem auto;
 }
@@ -171,12 +170,12 @@ body {
 }
 
 .download-btn:hover {
-  background-color: #4e4cff; /* تغيير اللون الخلفي إلى الأزرق */
-  transform: scale(1.05); /* تكبير الزر */
-  color: #ffffff !important; /* تغيير اللون النصي إلى الأبيض */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* إضافة تأثير الظل */
-}
+  background-color: #4e4cff; 
 
+  transform: scale(1.05); 
+  color: #ffffff !important; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
 /* أيقونة الهمبرغر */
 .icon {
   width: 1.5rem;
@@ -206,7 +205,7 @@ body {
   }
 }
 
-/*--------- صفحة الاتصال ---------*/
+/*--------- contact page---------*/
 
 body.contact {
   margin: 0;
@@ -219,7 +218,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 .navbar {
   background-color: var(--heading-color);
   padding: 1rem;
@@ -239,7 +237,6 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .menu-btn {
   background: none;
   border: none;
@@ -367,7 +364,6 @@ a {
   margin-bottom: 0.5rem;
   color: var(--form-label-color);
 }
-
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -390,7 +386,7 @@ a {
 
 .submit-btn:hover {
   background-color: #4e4cff;
-  transform: scale(1.05); /* تكبير الزر بنسبة 5% */
+  transform: scale(1.05);
 }
 
 
@@ -413,7 +409,6 @@ a {
 .contact-info a:hover {
   color: var(--menu-bg);
 }
-
 .footer {
   background-color: var(--footer-bg-resume);
   color: var(--heading-color);
@@ -421,8 +416,7 @@ a {
   padding: 1rem;
   margin-top: 2rem;
 }
-
-/*--------- صفحة المشاريع ---------*/
+/*--------- Projects page ---------*/
 
 body.projects {
   margin: 0;
@@ -453,7 +447,6 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .hamburger {
   display: none;
 }
@@ -469,7 +462,6 @@ a {
   width: 24px;
   height: 24px;
 }
-
 .menu {
   list-style: none;
   display: flex;
@@ -494,7 +486,6 @@ a {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 .projects-header {
   text-align: center;
   margin-bottom: 2rem;
@@ -505,7 +496,6 @@ a {
   color: var(--project-heading-color);
   margin-bottom: 0.5rem;
 }
-
 .projects-header p {
   font-size: 1.125rem;
   color: var(--project-text-color);
@@ -524,14 +514,11 @@ a {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: all 0.3s ease-in-out;
 }
-
 .project-card:hover {
   background: linear-gradient(to right,var(--gradient-start), var(--gradient-end));
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
-
-
 .project-card h2 {
   font-size: 1.5rem;
   color: var(--project-heading-color);
@@ -551,12 +538,10 @@ a {
   color: var(--project-heading-color);
   font-weight: 500;
 }
-
 .project-card a:hover {
   color: var(--project-heading-color);
   text-decoration: underline;
 }
-
 .footer {
   background-color: var(--footer-bg-project);
   color: var(--heading-color);
@@ -565,7 +550,7 @@ a {
   margin-top: 2rem;
 }
 
-/*--------- resume---------*/
+/*--------- resume page---------*/
 
 body.resume {
   font-family: 'Rubik', sans-serif;
@@ -573,13 +558,11 @@ body.resume {
   color: var(--project-heading-color);
   margin: 0;
 }
-
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
 }
-
 .navbar {
   background-color: var(--menu-bg);
   padding: 1rem;
@@ -632,15 +615,6 @@ body.resume {
   border-radius: 5px;
 }
 
-/*cards*/
-/* .card-resume {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  overflow: hidden;
-} */
-
-
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -654,9 +628,7 @@ body.resume {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
-
+/*footer*/
 .footer {
   background-color: var(--footer-bg-resume);
   color: var(--text-color-footer);
@@ -667,7 +639,7 @@ body.resume {
 .text-center {
   text-align: center;
 }
-
+/*menu on mobile responsive*/
 @media (max-width: 768px) {
   .hamburger {
     display: block;
