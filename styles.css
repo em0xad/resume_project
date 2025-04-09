@@ -1,697 +1,684 @@
-/*visual colors*/
+/* تعريف المتغيرات في :root لتسهيل التعديل من مكان واحد */
 :root {
-  --primary-color: #000000;
-  --secondary-color: #d4af37;
+  --primary-color: #ffffff;
+  --secondary-color: #c63bfa;
   --background-color: #ffffff;
-  --text-color: #333333;
-  --heading-color: #222222;
+  --text-color: #b9b9b9;
+  --body-text-color: #1f2937;
+  --heading-color: #ffffff;
   --border-color: #cccccc;
-  --link-color: #d4af37;
+  --link-color: #c63bfa;
+  --hover-color: #ba1e33;
+
+  --card-hover-color: #12c2e9;
+  --download-btn-hover: #81ffd7;
+  --nav-links-hover-bg: #1c2f6c;
+
+  --gradient-start: #df78ff;
+  --gradient-end: #5edcff;
+
+  --menu-bg: #0f172a;
+/* 
+  --contact-section-bg: #ffffff; 
+  --contact-heading-color: #1e3a8a;
+  --contact-text-color: #6b7280;
+  --contact-card-bg: #f9fafb;
+  --form-label-color: #374151;
+  --form-border-color: #d1d5db;
+  --submit-btn-bg: var(--menu-bg);
+
+  --project-heading-color: #0f172a;
+  --project-text-color: #718096;
+  --project-card-bg: #f9fafb;
+  --project-card-text-color: #4a5568;
+
+  --footer-bg-project: #2d3748;
+  --footer-bg-resume: #0f172a; */
 }
 
+/*--------- الأساليب المشتركة ---------*/
 
-/* Hover Effect for Cards */
-.card:hover {
-    background-color:#12c2e9;
-}
-/* تعريف hover بشكل مخصص */
+/* تأثير hover للروابط */
 a:hover {
-    color: #ba1e33 !important;
+  color: var(--hover-color) !important;
 }
 
-
-
-/* إعداد الخط */
+/* إعداد الخط وخلفية الجسم */
 body {
-    font-family: 'Rubik', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* ألوان الهوية */
-  .bg-primary { background-color: #0f172a; }
-  .bg-primary-dark { background-color: #0f172a; }
-  .bg-secondary { background-color: #10b981; }
-  .bg-tertiary { background-color: #059669; }
-  .bg-primary-gradient {
-    background: linear-gradient(to left, #000000, #d0c200);  }
-  .bg-gray-800 { background-color: #0f172a; }
-  
-  .text-white { color: white; }
-  .text-primary { color: #1d4ed8; }
-  .text-secondary { color: #6b7280; }
-  
-  /* الحاوية */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
-  }
-  
-  /* تنسيقات النص */
-  .text-center { text-align: center; }
-  .text-2xl { font-size: 1.5rem; font-weight: bold; }
-  .text-3xl { font-size: 1.875rem; font-weight: bold; }
-  .text-4xl { font-size: 2.25rem; font-weight: 800; }
-  .text-lg { font-size: 1.125rem; }
-  .text-xl { font-size: 1.25rem; }
-  .font-extrabold { font-weight: 800; }
-  
-  /* حواف وتباعد */
-  .p-4 { padding: 1rem; }
-  .p-8 { padding: 2rem; }
-  .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-  .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-  .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-  .px-4 { padding-left: 1rem; padding-right: 1rem; }
-  .mb-4 { margin-bottom: 1rem; }
-  
-  /* الشعار */
-  .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  /* صورة البروفايل */
-  .profile-img {
-    border-radius: 9999px;
-    width: 8rem;
-    height: 8rem;
-    display: block;
-    margin: 11px auto 1rem auto;
-  }
-  
-  /* قائمة التنقل */
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 2.2rem;
-    left: 0;
-    width:92.5vw;
-    background-color: #0f172a;
-    z-index: 50;
-    text-align: center;
-  }
-  
-  .menu li {
-    list-style: none;
-  }
-  
-  .menu li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu li a:hover {
-    background-color: #0f172a;
-  }
-  
-  /* زر التنزيل */
-  .download-btn {
-    background-color: #10b981;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .download-btn:hover {
-    background-color: #059669;
-  }
-  
-  /* أيقونة الهمبرغر */
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  
-  /* إخفاء/إظهار للقائمة */
-  .hidden {
-    display: none;
-  }
-  
-  /* إخفاء الهمبرغر على الشاشات الكبيرة */
-  @media (min-width: 768px) {
-    .md-hidden {
-      display: none !important;
-    }
-  
-    .menu {
-      position: static;
-      display: flex !important;
-      flex-direction: row;
-      width: auto;
-      background-color: transparent;
-      justify-content: flex-end;
-    }
-  
-    .menu li {
-      margin-left: 1.5rem;
-    }
-  }
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--body-text-color);
+  margin: 0;
+  padding: 0;
+}
 
-  /*contact page*/
-  
-  body {
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
+/* تدرج الخلفية */
+.bg-primary-gradient {
+  background: linear-gradient(to left, var(--gradient-start), var(--gradient-end));
+}
+
+/* الحاوية العامة */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* تنسيقات النص */
+.text-center { text-align: center; }
+.text-2xl { font-size: 1.5rem; font-weight: bold; }
+.text-3xl { font-size: 1.875rem; font-weight: bold; }
+.text-4xl { font-size: 2.25rem; font-weight: 800; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.font-extrabold { font-weight: 800; }
+
+/* الحواف والتباعد */
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; 
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  box-shadow: 12px;
+  box-shadow: 1px 6px 30px 18px rgb(0 0 0 / 22%);
+  border-radius: 4%;}
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+/*--------- رأس وترويسة الصفحة ---------*/
+
+/* الشعار */
+.logo {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* صورة البروفايل */
+.profile-img {
+  border-radius: 9999px;
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  margin: 11px auto 1rem auto;
+}
+
+/*--------- قائمة التنقل ---------*/
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  width: 92.5vw;
+  background-color: var(--menu-bg);
+  z-index: 50;
+  text-align: center;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: var(--menu-bg);
+}
+
+/* زر التنزيل */
+.download-btn {
+  background-color: var(--link-color);
+  color: var(--heading-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--download-btn-hover);
+  scale: 10px;
+}
+
+/* أيقونة الهمبرغر */
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*--------- استجابة القائمة ---------*/
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md-hidden {
+    display: none !important;
+  }
+  .menu {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    background-color: transparent;
+    justify-content: flex-end;
+  }
+  .menu li {
+    margin-left: 1.5rem;
+  }
+}
+
+/*--------- صفحة الاتصال ---------*/
+
+body.contact {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar {
-    background-color: #0f172a;
-    padding: 1rem;
+  background-color: var(--heading-color);
+  padding: 1rem;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 .nav-brand {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .menu-btn {
-    background: none;
-    border: none;
-    color: white;
-    display: block;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  display: block;
+  cursor: pointer;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    flex-direction: column;
-    background-color: #0f172a;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  background-color: var(--menu-bg);
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-links.show {
-    display: flex;
+  display: flex;
 }
 
 .nav-links li {
-    text-align: center;
+  text-align: center;
 }
 
 .nav-links a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: white;
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--heading-color);
 }
 
 .nav-links a:hover {
-    background-color: #1c2f6c;
+  background-color: var(--nav-links-hover-bg);
 }
 
 @media (min-width: 768px) {
-    .nav-links {
-        display: flex !important;
-        position: static;
-        justify-content: end;
-        flex-direction: row;
-        background: transparent;
-    }
+  .nav-links {
+    display: flex !important;
+    position: static;
+    justify-content: end;
+    flex-direction: row;
+    background: transparent;
+  }
 }
 
-    .hamburger {
-        display: none;
-    }
+.hamburger {
+  display: none;
+}
 
-
+/* قسم الاتصال */
 .contact-section {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--contact-section-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .contact-header {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-header h1 {
-    font-size: 2.5rem;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--contact-heading-color);
+  margin-bottom: 1rem;
 }
 
 .contact-header p {
-    font-size: 1.125rem;
-    color: #6b7280;
+  font-size: 1.125rem;
+  color: var(--contact-text-color);
 }
 
 .contact-grid {
-    display: grid;
-    gap: 2rem;
+  display: grid;
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .contact-card {
-    background-color: #f9fafb;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--contact-card-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
 .contact-card h2 {
-    font-size: 1.5rem;
-    color: #1e3a8a;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--contact-heading-color);
+  margin-bottom: 1rem;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #374151;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--form-label-color);
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--form-border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
 }
 
 .submit-btn {
-    width: 100%;
-    background-color: #0f172a;
-    color: white;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  background-color: var(--submit-btn-bg);
+  color: var(--heading-color);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #0f172a;
+  background-color: var(--submit-btn-bg);
 }
 
 .contact-info {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .contact-info li {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .contact-info a {
-    color: #0f172a;
-    margin-left: 0.5rem;
+  color: var(--menu-bg);
+  margin-left: 0.5rem;
 }
 
 .contact-info a:hover {
-    color: #0f172a;
+  color: var(--menu-bg);
 }
 
 .footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  background-color: var(--footer-bg-resume);
+  color: var(--heading-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-/*project page*/
-  
-body {
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-    background-color: #f7fafc;
-    color: #2d3748;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .nav {
-    background-color: #0f172a;
-    padding: 1rem;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .hamburger {
-    display: none;
-  }
-  
-  .hamburger-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .hamburger-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .menu li a {
-    color: white;
-    padding: 0.5rem 1rem;
-  }
-  
-  .menu li a:hover {
-    background-color: #0f172a;
-    border-radius: 5px;
-  }
-  
-  .projects-section {
-    background-color: white;
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 1200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .projects-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .projects-header h1 {
-    font-size: 2.5rem;
-    color: #0f172a;
-    margin-bottom: 0.5rem;
-  }
-  
-  .projects-header p {
-    font-size: 1.125rem;
-    color: #718096;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .project-card {
-    background-color: #f9fafb;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .project-card:hover {
-    background-color: #e0f2f1;
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  }
-  
-  .project-card h2 {
-    font-size: 1.5rem;
-    color: #0f172a;
-    margin-bottom: 1rem;
-  }
-  
-  .project-card p {
-    color: #4a5568;
-    margin-bottom: 1rem;
-  }
-  
-  .project-card a {
-    color: #0f172a;
-    font-weight: 500;
-  }
-  
-  .project-card a:hover {
-    color: #0f172a;
-    text-decoration: underline;
-  }
-  
-  .footer {
-    background-color: #2d3748;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      background-color: #0f172a;
-      position: absolute;
-      top: 64px;
-      left: 0;
-      width: 100%;
-      padding: 1rem 0;
-      z-index: 1000;
-    }
-  
-    .menu.show {
-      display: flex;
-    }
-  
-    .menu li {
-      text-align: center;
-      padding: 0.5rem 0;
-    }
-  }
+/*--------- صفحة المشاريع ---------*/
 
-  /*resume page*/
-  
-  body {
-    font-family: 'Rubik', sans-serif;
-    background-color: #f7fafc;
-    color: #0f172a;
-    margin: 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1rem;
-  }
-  
-  .navbar {
-    background-color: #0f172a;
-    padding: 1rem;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-  
-  .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
+body.projects {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--background-color);
+  color: var(--project-heading-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  background-color: var(--menu-bg);
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.menu li a {
+  color: var(--heading-color);
+  padding: 0.5rem 1rem;
+}
+
+.menu li a:hover {
+  background-color: var(--menu-bg);
+  border-radius: 5px;
+}
+
+.projects-section {
+  background-color: var(--contact-section-bg);
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-header h1 {
+  font-size: 2.5rem;
+  color: var(--project-heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.projects-header p {
+  font-size: 1.125rem;
+  color: var(--project-text-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--project-card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  background-color: var(--card-hover-color);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  color: var(--project-heading-color);
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: var(--project-card-text-color);
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: var(--project-heading-color);
+  font-weight: 500;
+}
+
+.project-card a:hover {
+  color: var(--project-heading-color);
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--footer-bg-project);
+  color: var(--heading-color);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/*--------- صفحة الرزومه ---------*/
+
+body.resume {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--background-color);
+  color: var(--project-heading-color);
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.navbar {
+  background-color: var(--menu-bg);
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: var(--heading-color);
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.menu li a {
+  color: var(--heading-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.menu li a:hover {
+  background-color: var(--menu-bg);
+  border-radius: 5px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
   .hamburger {
     display: none;
   }
-  
-  .menu-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-  
   .menu {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+    position: static;
+    background: transparent;
+    flex-direction: row;
   }
-  
-  .menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .menu li a:hover {
-    background-color: #0f172a;
-    border-radius: 5px;
-  }
-  
   .cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (min-width: 768px) {
-    .hamburger {
-      display: none;
-    }
-  
-    .menu {
-      position: static;
-      background: transparent;
-      flex-direction: row;
-    }
-  
-    .cards-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  background: var(--contact-section-bg);
+  padding: 1.5rem;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.card-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-content ul {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.card-content a {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--footer-bg-resume);
+  color: var(--heading-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-  
-  .card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-content {
-    background: white;
-    padding: 1.5rem;
-    transition: background 0.5s ease, color 0.5s ease;
-  }
-  
-  .card-content h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .card-content ul {
-    padding-left: 1.25rem;
-    list-style-type: disc;
-  }
-  
-  .card-content a {
-    text-decoration: underline;
-  }
-  
-  .footer {
-    background-color: #0f172a;
-    color: white;
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 27px;
+    left: -16px;
+    width: 100vw;
+    background-color: var(--menu-bg);
+    z-index: 50;
     padding: 1rem 0;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .menu li {
     text-align: center;
   }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 27px;
-      left: -16px;
-      width: 100vw;
-      background-color: #0f172a;
-      z-index: 50;
-      padding: 1rem 0;
-    }
-  
-    .menu.show {
-      display: flex;
-    }
-  
-    .menu li {
-      text-align: center;
-    }
-  }
-  
+}
